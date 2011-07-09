@@ -1,6 +1,4 @@
 name = no_contact_option
-description = Hide option 'Contact settings' completedly from user edit page.
+description = Hide option 'Contact settings' completely from user edit page.
 dependencies[] = contact
-version = "7.x-dev"
-project = "x_contact_option"
 core = "7.x"
