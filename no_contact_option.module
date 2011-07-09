@@ -1,0 +1,10 @@
+<?php
+/**
+ * implementation of hook_form_alter()
+ * hide option 'Contact Settings' completedly from user edit page.
+ */
+function no_contact_option_form_alter(&$form, &$form_state) {
+  if (arg(0)=='user' && arg(2)=='edit') {
+    unset($form['contact']);
+  }
+}
