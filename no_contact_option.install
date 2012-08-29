@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ *   Install, update and uninstall functions for the no_contact_option module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function no_contact_option_install() {
+  // Change weight so that the module is executed after module "contact".
+  $weight = db_query("SELECT weight FROM {system} WHERE type = 'module' AND name = 'contact'")->fetchField();
+  $weight++;
+  db_update('system')
+    ->fields(array('weight' => $weight))
+    ->condition('type', 'module')
+    ->condition('name', 'no_contact_option')
+    ->execute();
+}
