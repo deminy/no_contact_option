@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @file
+ * Hide option 'Contact settings' from user edit page if user has no permission to access personal contact forms.
+ */
+
 /**
  * implementation of hook_form_alter()
  * hide option 'Contact Settings' completely from user edit page.
