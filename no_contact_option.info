@@ -1,4 +1,4 @@
 name = No Contact Option
-description = Hide option 'Contact settings' completely from user edit page if user doesn't have permission to access personal contact forms.
+description = Hide option 'Contact settings' from user edit page if user no permission accessing personal contact forms
 dependencies[] = contact
 core = "7.x"
