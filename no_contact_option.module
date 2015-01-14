@@ -2,14 +2,18 @@
 
 /**
  * @file
- * Hide option 'Contact settings' from user edit page if user has no permission to access personal contact forms.
+ * Hide option 'Contact settings' from user edit page if user has no permission
+ * to access personal contact forms.
  */
 
 /**
  * implementation of hook_form_alter()
  * hide option 'Contact Settings' completely from user edit page.
  */
-function no_contact_option_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+function no_contact_option_form_user_profile_form_alter(
+  &$form,
+  &$form_state,
+  $form_id) {
   if (!user_access('access user contact forms')) {
     unset($form['contact']);
   }
