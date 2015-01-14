@@ -1,6 +1,6 @@
 name = No Contact Option
 description = Hide option 'Contact settings' from user edit page.
-package = User interface
+package = Site Navigation
 
 dependencies[] = contact
 
