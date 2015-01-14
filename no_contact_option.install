@@ -1,8 +1,29 @@
 <?php
+
 /**
  * @file
  * Install, update and uninstall functions for the no_contact_option module.
  */
+
+/**
+ * Implements hook_requirements().
+ */
+function no_contact_option_requirements($phase) {
+  $requirements = array();
+
+  // Ensure translations don't break during installation.
+  $t = get_t();
+
+  if (!module_exists('contact')) {
+    $requirements['no_contact_option'] = array(
+      'title' => $t('Module "Contact" Not Enabled.'),
+      'value' => $t('There is no need to install module "No contact option".'),
+      'severity' => REQUIREMENT_ERROR,
+    );
+  }
+
+  return $requirements;
+}
 
 /**
  * Implements hook_install().
