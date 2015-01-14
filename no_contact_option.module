@@ -2,8 +2,7 @@
 
 /**
  * @file
- * Hide option 'Contact settings' from user edit page if user has no permission
- * to access personal contact forms.
+ * Hide option 'Contact settings' from user edit page.
  */
 
 /**
@@ -14,7 +13,7 @@ function no_contact_option_form_user_profile_form_alter(
   &$form_state,
   $form_id) {
   if (!user_access('access user contact forms')) {
-    // hide option 'Contact Settings' completely from user edit page.
+    // Hide option 'Contact Settings' completely from user edit page.
     unset($form['contact']);
   }
 }
