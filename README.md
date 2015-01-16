@@ -1,3 +1,6 @@
+No Contact Option
+=================
+
 After you have core module 'contact' installed, option 'Contact settings' is
 always displayed on user edit page even you have permission "Use users' personal
 contact forms" inactivated. By enabling this module, you can have that option
