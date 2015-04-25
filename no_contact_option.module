@@ -6,7 +6,7 @@
  */
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
 function no_contact_option_form_user_profile_form_alter(
   &$form,
